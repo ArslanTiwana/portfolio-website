@@ -181,4 +181,44 @@
   .avatar-glow {
     animation: glow 4s ease-in-out infinite;
   }
+
+  /* Theme-specific custom styles */
+  .bg-hero-light {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+
+  .bg-hero-dark {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+
+  .text-light {
+    color: var(--foreground);
+  }
+
+  .text-dark {
+    color: var(--foreground);
+  }
+
+  /* Custom gradients for both themes */
+  .text-gradient-light {
+    background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-dark {
+    background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-light {
+    background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+  }
 }

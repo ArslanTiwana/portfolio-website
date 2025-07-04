@@ -34,16 +34,16 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section id="testimonials" className="py-20 bg-white">
+    <section id="testimonials" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-gradient-to-r from-pink-500 to-red-500 text-white">
             ❤️ Testimonials
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             What People Say About My Work
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-6 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mb-6 rounded-full"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

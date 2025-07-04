@@ -35,17 +35,17 @@ export default function LearningJourneySection() {
   ];
 
   return (
-    <section id="journey" className="py-20 bg-slate-50">
+    <section id="journey" className="py-20 bg-slate-50 dark:bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-gradient-to-r from-orange-500 to-red-500 text-white">
             🔥 Learning Journey
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             From Curious Learner to Confident Developer
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-6 rounded-full"></div>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mb-6 rounded-full"></div>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             In 2022, I started my journey in software development with curiosity and passion. Over the years, I've grown from building small projects to contributing to real-world applications and architecting scalable systems.
           </p>
         </div>

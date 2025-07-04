@@ -8,7 +8,7 @@ export default function ProfileAvatar() {
         {/* Gradient border with glow animation */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-emerald-400 rounded-full p-1 avatar-glow">
           {/* Inner circle with profile */}
-          <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center">
+          <div className="w-full h-full bg-background rounded-full flex items-center justify-center">
             {/* Professional avatar placeholder */}
             <div className="w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
               <User className="w-12 h-12 md:w-16 md:h-16 text-white" />
