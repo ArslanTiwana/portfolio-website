@@ -49,7 +49,15 @@ export default function Navigation() {
     } border-b border-slate-800`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="text-xl font-bold text-blue-400">Muhammad Arslan</div>
+          <div className="flex items-center space-x-3">
+            {/* Mini profile avatar */}
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-400 to-emerald-400 rounded-full p-0.5">
+              <div className="w-full h-full bg-slate-900 rounded-full flex items-center justify-center">
+                <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-full"></div>
+              </div>
+            </div>
+            <div className="text-xl font-bold text-blue-400">Muhammad Arslan</div>
+          </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">

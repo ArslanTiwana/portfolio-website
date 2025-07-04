@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
+import ProfileAvatar from "@/components/profile-avatar";
 
 export default function HeroSection() {
   const scrollToSection = (href: string) => {
@@ -19,18 +21,29 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent)] opacity-70"></div>
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Profile Avatar */}
+        <ProfileAvatar />
+        
         <div className="mb-8">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gradient">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gradient">
             Muhammad Arslan
           </h1>
-          <p className="text-xl md:text-2xl text-slate-300 mb-8">
-            Full-Stack Developer
-          </p>
+          
+          {/* Academic Achievement Badge */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
+            <p className="text-xl md:text-2xl text-slate-300">
+              Full-Stack Developer
+            </p>
+            <Badge className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-yellow-900 px-4 py-1 text-sm font-semibold shadow-lg">
+              🏆 Gold Medalist BSCS
+            </Badge>
+          </div>
+          
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8 rounded-full"></div>
         </div>
         
         <p className="text-lg md:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-12">
-          A detail-driven full-stack engineer with <strong className="text-blue-400">2+ years</strong> of experience in backend-heavy systems and full-stack application design. I bring deep expertise in <strong className="text-emerald-400">NestJS</strong>, <strong className="text-emerald-400">PostgreSQL</strong>, and real-world system architecture.
+          A <strong className="text-yellow-400">Gold Medalist</strong> computer science graduate and detail-driven full-stack engineer with <strong className="text-blue-400">2+ years</strong> of experience in backend-heavy systems and full-stack application design. I bring deep expertise in <strong className="text-emerald-400">NestJS</strong>, <strong className="text-emerald-400">PostgreSQL</strong>, and real-world system architecture.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
