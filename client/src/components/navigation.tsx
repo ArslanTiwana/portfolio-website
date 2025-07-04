@@ -21,6 +21,8 @@ export default function Navigation() {
     { href: "#skills", label: "Skills" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
+    { href: "#journey", label: "Journey" },
+    { href: "#testimonials", label: "Testimonials" },
     { href: "/blog", label: "Blog", isRoute: true },
     { href: "#contact", label: "Contact" },
   ];
