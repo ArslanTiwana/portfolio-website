@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function HeroSection() {
   const scrollToSection = (href: string) => {
@@ -39,6 +40,14 @@ export default function HeroSection() {
           >
             Get In Touch
           </Button>
+          <Link href="/blog">
+            <Button 
+              variant="outline"
+              className="border-slate-600 hover:border-blue-500 text-slate-300 hover:text-blue-400 px-8 py-3 font-semibold transition-colors"
+            >
+              Read My Blog
+            </Button>
+          </Link>
           <Button 
             onClick={() => scrollToSection("#projects")}
             variant="outline"

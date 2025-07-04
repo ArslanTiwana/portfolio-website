@@ -48,12 +48,13 @@ This is a modern full-stack web application built as a personal portfolio websit
 - **Accessibility**: Built on Radix UI primitives for keyboard navigation and screen reader support
 
 ### Portfolio Sections
-- **Navigation**: Smooth scrolling navigation with mobile hamburger menu
-- **Hero Section**: Professional introduction with call-to-action buttons
+- **Navigation**: Smooth scrolling navigation with mobile hamburger menu and blog link
+- **Hero Section**: Professional introduction with call-to-action buttons including blog access
 - **Skills Section**: Technical stack organized by categories
 - **Experience Section**: Professional work history with achievements
 - **Projects Section**: Showcase of development projects
 - **Contact Section**: Professional contact information and links
+- **Blog System**: Markdown-based blog with syntax highlighting and responsive design
 
 ## Data Flow
 
@@ -111,7 +112,16 @@ This is a modern full-stack web application built as a personal portfolio websit
 
 Preferred communication style: Simple, everyday language.
 
+### Blog System Architecture
+- **Markdown Processing**: Server-side markdown parsing with syntax highlighting
+- **File Storage**: Blog posts stored as .md files in `/blogs` directory
+- **API Endpoints**: RESTful API for blog listing and individual post retrieval
+- **Content Features**: Automatic excerpt generation, read time calculation, and tag extraction
+- **Responsive Design**: Mobile-optimized blog layout with proper typography
+- **Navigation Integration**: Seamless navigation between portfolio and blog sections
+
 ## Changelog
 
 Changelog:
 - July 04, 2025. Initial setup
+- July 04, 2025. Added blog system with markdown support, syntax highlighting, and responsive design
