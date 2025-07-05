@@ -1,0 +1,41 @@
+[
+  {
+    "id": "building-scalable-apis-with-redis",
+    "title": "Building Scalable APIs with Redis: Caching and Session Management",
+    "excerpt": "Redis is more than just a cache—it's a powerful in-memory data structure store that can dramatically improve your API's performance and scalability. L...",
+    "author": "Muhammad Arslan",
+    "date": "2025-07-05",
+    "readTime": "6 min read",
+    "tags": [
+      "Development",
+      "Programming"
+    ],
+    "slug": "building-scalable-apis-with-redis"
+  },
+  {
+    "id": "getting-started-with-nestjs",
+    "title": "Getting Started with NestJS: A Comprehensive Guide",
+    "excerpt": "Building scalable Node.js applications has never been easier with NestJS. This framework brings the power of TypeScript and enterprise-grade architect...",
+    "author": "Muhammad Arslan",
+    "date": "2025-07-05",
+    "readTime": "2 min read",
+    "tags": [
+      "Development",
+      "Programming"
+    ],
+    "slug": "getting-started-with-nestjs"
+  },
+  {
+    "id": "postgresql-performance-optimization",
+    "title": "PostgreSQL Performance Optimization: Advanced Techniques",
+    "excerpt": "PostgreSQL is one of the most powerful open-source relational databases, but getting optimal performance requires understanding its internals and appl...",
+    "author": "Muhammad Arslan",
+    "date": "2025-07-05",
+    "readTime": "4 min read",
+    "tags": [
+      "Development",
+      "Programming"
+    ],
+    "slug": "postgresql-performance-optimization"
+  }
+]
