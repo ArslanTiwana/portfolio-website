@@ -20,7 +20,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-emerald-50 dark:from-slate-900 dark:to-slate-800"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent)] opacity-70"></div>
       
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[60px]">
         {/* Profile Avatar */}
         <ProfileAvatar />
         
@@ -54,17 +54,17 @@ export default function HeroSection() {
             Get In Touch
           </Button>
           <Link href="/blog">
-            <Button 
+          <Button 
               variant="outline"
-              className="border-slate-600 hover:border-blue-500 text-slate-300 hover:text-blue-400 px-8 py-3 font-semibold transition-colors"
+              className="border-slate-600 hover:border-blue-500 text-black dark:text-slate-300 hover:text-blue-400 px-8 py-3 font-semibold transition-colors"
             >
               Read My Blog
-            </Button>
+          </Button>
           </Link>
           <Button 
             onClick={() => scrollToSection("#projects")}
             variant="outline"
-            className="border-slate-600 hover:border-blue-500 text-slate-300 hover:text-blue-400 px-8 py-3 font-semibold transition-colors"
+            className="border-slate-600 hover:border-blue-500 dark:text-slate-300 hover:text-blue-400 px-8 py-3 font-semibold transition-colors"
           >
             View Projects
           </Button>

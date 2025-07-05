@@ -10,8 +10,8 @@ export default function DevToolkitSection() {
       color: "bg-gradient-to-r from-blue-500 to-indigo-500",
       tools: [
         { name: "VS Code", description: "with custom setup" },
-        { name: "Warp + Zsh + Tmux", description: "terminal setup" }
-      ]
+        { name: "Warp + Zsh + Tmux", description: "terminal setup" },
+      ],
     },
     {
       category: "API & Database",
@@ -19,8 +19,8 @@ export default function DevToolkitSection() {
       color: "bg-gradient-to-r from-emerald-500 to-green-500",
       tools: [
         { name: "Postman", description: "API testing" },
-        { name: "TablePlus", description: "database management" }
-      ]
+        { name: "TablePlus", description: "database management" },
+      ],
     },
     {
       category: "Development & Debugging",
@@ -28,8 +28,8 @@ export default function DevToolkitSection() {
       color: "bg-gradient-to-r from-orange-500 to-red-500",
       tools: [
         { name: "Browser DevTools", description: "debugging" },
-        { name: "React DevTools", description: "React debugging" }
-      ]
+        { name: "React DevTools", description: "React debugging" },
+      ],
     },
     {
       category: "Version Control & Project Management",
@@ -38,8 +38,8 @@ export default function DevToolkitSection() {
       tools: [
         { name: "GitHub + GitKraken", description: "version control" },
         { name: "Linear", description: "project management" },
-        { name: "Notion", description: "documentation" }
-      ]
+        { name: "Notion", description: "documentation" },
+      ],
     },
     {
       category: "Deployment & Infrastructure",
@@ -49,9 +49,9 @@ export default function DevToolkitSection() {
         { name: "Railway", description: "deployment" },
         { name: "Render", description: "hosting" },
         { name: "AWS EC2", description: "cloud infrastructure" },
-        { name: "Nginx", description: "web server" }
-      ]
-    }
+        { name: "Nginx", description: "web server" },
+      ],
+    },
   ];
 
   return (
@@ -66,17 +66,23 @@ export default function DevToolkitSection() {
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Here's what I use daily to stay productive and build high-quality software
+            Here's what I use daily to stay productive and build high-quality
+            software
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {toolCategories.map((category, index) => (
-            <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+            <Card
+              key={index}
+              className="bg-white shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+            >
               <CardContent className="p-6">
                 {/* Category header */}
                 <div className="flex items-center mb-4">
-                  <div className={`w-12 h-12 ${category.color} rounded-lg flex items-center justify-center text-white mr-4`}>
+                  <div
+                    className={`w-12 h-12 ${category.color} rounded-lg flex items-center justify-center text-white mr-4`}
+                  >
                     {category.icon}
                   </div>
                   <h3 className="text-lg font-bold text-slate-900">
@@ -90,8 +96,12 @@ export default function DevToolkitSection() {
                     <div key={toolIndex} className="flex items-start">
                       <div className="w-2 h-2 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                       <div>
-                        <div className="font-semibold text-slate-900">{tool.name}</div>
-                        <div className="text-sm text-slate-600">{tool.description}</div>
+                        <div className="font-semibold text-slate-900">
+                          {tool.name}
+                        </div>
+                        <div className="text-sm text-slate-600">
+                          {tool.description}
+                        </div>
                       </div>
                     </div>
                   ))}
@@ -103,14 +113,15 @@ export default function DevToolkitSection() {
 
         {/* Productivity note */}
         <div className="mt-16">
-          <Card className="bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+          <Card className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white">
             <CardContent className="p-8 text-center">
               <Terminal className="w-12 h-12 mx-auto mb-4 opacity-80" />
               <h3 className="text-xl font-bold mb-4">Productivity Focus</h3>
               <p className="text-lg opacity-90 max-w-3xl mx-auto">
-                I've carefully curated this toolkit over years of development. Each tool serves a specific purpose 
-                in my workflow, from rapid prototyping to production deployment. The goal is maximum efficiency 
-                with minimal context switching.
+                I've carefully curated this toolkit over years of development.
+                Each tool serves a specific purpose in my workflow, from rapid
+                prototyping to production deployment. The goal is maximum
+                efficiency with minimal context switching.
               </p>
             </CardContent>
           </Card>

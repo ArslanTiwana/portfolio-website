@@ -22,13 +22,13 @@ export default function Home() {
       <TechStackSection />
       <ExperienceSection />
       <ProjectsSection />
-      <LearningRoadmapSection />
       <AchievementsSection />
+      {/* <LearningRoadmapSection /> */}
       <LearningJourneySection />
-      <TestimonialsSection />
       <CurrentLearningSection />
       <DevToolkitSection />
       <FavoriteResourcesSection />
+      <TestimonialsSection />
       <QuoteSection />
       <ContactSection />
       <Footer />
