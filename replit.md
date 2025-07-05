@@ -1,8 +1,8 @@
-# Portfolio Website - Full-Stack Web Application
+# Portfolio Website - Static Site Application
 
 ## Overview
 
-This is a modern full-stack web application built as a personal portfolio website for Muhammad Arslan, a Full-Stack Developer. The application showcases a developer's professional experience, skills, projects, and achievements through a clean, responsive interface.
+This is a modern static site application built as a personal portfolio website for Muhammad Arslan, a Full-Stack Developer. The application showcases a developer's professional experience, skills, projects, and achievements through a clean, responsive interface. **Converted from full-stack to static site on July 5, 2025 for deployment to S3/GitHub Pages.**
 
 ## System Architecture
 
@@ -10,36 +10,30 @@ This is a modern full-stack web application built as a personal portfolio websit
 - **Framework**: React 18 with TypeScript
 - **Styling**: Tailwind CSS with custom design system
 - **UI Components**: shadcn/ui component library built on Radix UI primitives
-- **State Management**: TanStack Query for server state management
 - **Routing**: Wouter for client-side routing
-- **Build Tool**: Vite for fast development and optimized builds
+- **Build Tool**: Vite for fast development and optimized static builds
+- **Deployment**: Static site ready for S3, GitHub Pages, or similar platforms
 
-### Backend Architecture
-- **Runtime**: Node.js with Express.js framework
-- **Language**: TypeScript with ES modules
-- **Database**: PostgreSQL with Drizzle ORM
-- **Database Provider**: Neon Database (serverless PostgreSQL)
-- **Session Management**: In-memory storage (development) with interface for database storage
-- **API Structure**: RESTful API with /api prefix routing
+### Static Site Architecture
+- **Blog System**: Markdown files converted to HTML/JSON at build time
+- **Content Management**: Pre-built static JSON files for blog posts
+- **Build Process**: Automated blog conversion using markdown-it with syntax highlighting
+- **No Backend Required**: Pure client-side application with static assets
 
 ### Development Setup
-- **Monorepo Structure**: Shared code between client and server
+- **Build Process**: Single build command creates static site in dist/public
+- **Blog Build**: TypeScript script converts .md files to HTML/JSON
 - **Development Server**: Vite dev server with HMR
-- **Production Build**: Separate client and server builds
-- **Database Migrations**: Drizzle Kit for schema management
+- **Production Build**: Static files ready for deployment
 
 ## Key Components
 
-### Database Layer
-- **ORM**: Drizzle ORM with PostgreSQL dialect
-- **Schema**: User management with username/password authentication
-- **Migrations**: Located in `./migrations` directory
-- **Connection**: Neon Database serverless connection
-
-### Authentication System
-- **User Schema**: Users table with id, username, password fields
-- **Validation**: Zod schema validation for user inputs
-- **Storage Interface**: Abstracted storage layer supporting both memory and database implementations
+### Static Blog System
+- **Content Source**: Markdown files in `/blogs` directory
+- **Build Process**: Automated conversion using markdown-it with Prism.js syntax highlighting
+- **Output**: Static JSON files with HTML content for each blog post
+- **Blog Index**: Generated index.json with metadata for all posts
+- **Client Integration**: React components fetch from static JSON files
 
 ### UI Component System
 - **Design System**: shadcn/ui with "new-york" style variant
@@ -63,29 +57,27 @@ This is a modern full-stack web application built as a personal portfolio websit
 
 ## Data Flow
 
-1. **Client Requests**: Browser loads React application from Vite dev server
-2. **API Calls**: TanStack Query manages API requests to Express backend
-3. **Database Operations**: Backend uses Drizzle ORM to interact with PostgreSQL
-4. **Session Management**: Express handles user sessions and authentication
-5. **Static Assets**: Vite serves static files and handles asset optimization
+1. **Client Requests**: Browser loads React application from static build or Vite dev server
+2. **Static Content**: React components fetch blog content from pre-built JSON files
+3. **Blog Content**: Markdown files converted to HTML/JSON at build time
+4. **Asset Serving**: All assets served statically (no server required)
+5. **Client-Side Routing**: Wouter handles navigation without server interaction
 
 ## External Dependencies
 
 ### Frontend Dependencies
-- **React Ecosystem**: React 18, React DOM, React Router (Wouter)
+- **React Ecosystem**: React 18, React DOM, Wouter for routing
 - **UI Libraries**: Radix UI components, Lucide React icons
-- **State Management**: TanStack Query for server state
 - **Styling**: Tailwind CSS, class-variance-authority for component variants
 - **Form Handling**: React Hook Form with Hookform resolvers
 - **Date Handling**: date-fns for date formatting
 - **Carousel**: Embla Carousel for interactive components
 
-### Backend Dependencies
-- **Server Framework**: Express.js with TypeScript support
-- **Database**: Drizzle ORM, @neondatabase/serverless
-- **Session Storage**: connect-pg-simple for PostgreSQL session store
-- **Validation**: Zod for schema validation
-- **Development**: tsx for TypeScript execution
+### Build Dependencies
+- **Markdown Processing**: markdown-it with syntax highlighting (markdown-it-prism)
+- **File Processing**: gray-matter for frontmatter parsing, fs-extra for file operations
+- **Syntax Highlighting**: Prism.js for code blocks
+- **Static Site Generation**: Custom TypeScript build scripts
 
 ### Development Tools
 - **Build Tools**: Vite, esbuild for production builds
@@ -96,22 +88,23 @@ This is a modern full-stack web application built as a personal portfolio websit
 ## Deployment Strategy
 
 ### Development Environment
-- **Local Development**: Vite dev server with Express backend
+- **Local Development**: Vite dev server with HMR
+- **Blog Building**: Run `npx tsx scripts/build-blogs.ts` to convert markdown to JSON
 - **Hot Module Replacement**: Vite HMR for fast development cycles
-- **Database**: Local PostgreSQL or Neon Database development instance
-- **Environment Variables**: DATABASE_URL for database connection
+- **No Database Required**: Pure static site with client-side functionality
 
 ### Production Build
-- **Frontend Build**: Vite builds React app to `dist/public`
-- **Backend Build**: esbuild bundles Express server to `dist/index.js`
-- **Static Serving**: Express serves built frontend from `dist/public`
-- **Database**: Production PostgreSQL instance via Neon Database
+- **Blog Build**: `npx tsx scripts/build-blogs.ts` converts .md files to static JSON
+- **Static Build**: `npx vite build` creates optimized static site in `dist/public`
+- **Ready for Deployment**: All files in `dist/public` can be deployed to any static host
 
 ### Hosting Options
-- **Platform**: Configured for deployment on Railway, Fly.io, or similar platforms
-- **Database**: Neon Database serverless PostgreSQL
-- **Process Management**: PM2 for production process management
-- **Environment**: NODE_ENV=production for production optimizations
+- **Static Hosts**: S3, GitHub Pages, Netlify, Vercel, CloudFlare Pages
+- **No Server Required**: Pure static files with client-side routing
+- **CDN Compatible**: All assets can be served from CDN
+- **Build Commands**: 
+  - Build: `npx tsx scripts/build-blogs.ts && npx vite build`
+  - Serve: Any static file server pointing to `dist/public`
 
 ## User Preferences
 
@@ -131,3 +124,4 @@ Changelog:
 - July 04, 2025. Initial setup
 - July 04, 2025. Added blog system with markdown support, syntax highlighting, and responsive design
 - July 04, 2025. Added comprehensive new sections: Learning Journey (timeline), Testimonials, Current Learning (with progress tracking), Dev Toolkit, and Favorite Resources. Enhanced profile avatar with animations and Gold Medalist highlighting throughout the site.
+- July 05, 2025. **Major Migration**: Converted from full-stack Express/PostgreSQL application to pure static site. Removed server dependencies, database components, and API endpoints. Implemented static blog system with markdown-to-HTML conversion at build time. Ready for deployment to S3, GitHub Pages, or any static hosting platform.
