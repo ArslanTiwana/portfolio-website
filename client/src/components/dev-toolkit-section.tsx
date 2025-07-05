@@ -5,12 +5,12 @@ import { Code, Terminal, Globe, Github, Zap, Database } from "lucide-react";
 export default function DevToolkitSection() {
   const toolCategories = [
     {
-      category: "Editor & Terminal",
+      category: "Editor",
       icon: <Code className="w-6 h-6" />,
       color: "bg-gradient-to-r from-blue-500 to-indigo-500",
       tools: [
-        { name: "VS Code", description: "with custom setup" },
-        { name: "Warp + Zsh + Tmux", description: "terminal setup" },
+        { name: "VS Code", description: "with custom setup + copilot" },
+        { name: "Cursor", description: "with AI MCP servers" },
       ],
     },
     {
@@ -19,16 +19,7 @@ export default function DevToolkitSection() {
       color: "bg-gradient-to-r from-emerald-500 to-green-500",
       tools: [
         { name: "Postman", description: "API testing" },
-        { name: "TablePlus", description: "database management" },
-      ],
-    },
-    {
-      category: "Development & Debugging",
-      icon: <Globe className="w-6 h-6" />,
-      color: "bg-gradient-to-r from-orange-500 to-red-500",
-      tools: [
-        { name: "Browser DevTools", description: "debugging" },
-        { name: "React DevTools", description: "React debugging" },
+        { name: "PgAdmin", description: "database management" },
       ],
     },
     {
@@ -36,9 +27,8 @@ export default function DevToolkitSection() {
       icon: <Github className="w-6 h-6" />,
       color: "bg-gradient-to-r from-purple-500 to-pink-500",
       tools: [
-        { name: "GitHub + GitKraken", description: "version control" },
-        { name: "Linear", description: "project management" },
-        { name: "Notion", description: "documentation" },
+        { name: "GitHub", description: "version control" },
+        { name: "Notion + Google Docs", description: "documentation" },
       ],
     },
     {
@@ -49,7 +39,19 @@ export default function DevToolkitSection() {
         { name: "Railway", description: "deployment" },
         { name: "Render", description: "hosting" },
         { name: "AWS EC2", description: "cloud infrastructure" },
-        { name: "Nginx", description: "web server" },
+      ],
+    },
+    {
+      category: "AI Tools",
+      icon: <Zap className="w-6 h-6" />,
+      color: "bg-gradient-to-r from-cyan-500 to-blue-500",
+      tools: [
+        { name: "ChatGPT", description: "Day to day tasks" },
+        {
+          name: "Claude",
+          description: "Extensive research and coding assitance",
+        },
+        { name: "Replit", description: "Develop  basic AI apps" },
       ],
     },
   ];

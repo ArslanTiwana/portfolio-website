@@ -5,10 +5,10 @@ import { TrendingUp, BookOpen, Code, Zap } from "lucide-react";
 export default function LearningJourneySection() {
   const journeySteps = [
     {
-      year: "2022–2023",
+      year: "2019–2023",
       title: "Foundation Building",
       description:
-        "Learned fundamentals of backend development with Node.js and PostgreSQL. Completed BSCS with a gold medal.",
+        "Learned fundamentals of software development. Completed BSCS with a gold medal.",
       icon: <BookOpen className="w-5 h-5" />,
       color: "bg-blue-500",
     },
@@ -24,7 +24,7 @@ export default function LearningJourneySection() {
       year: "2024",
       title: "Professional Growth",
       description:
-        "Took up freelance work (180+ hours) and built a strong command over NestJS, Redis, and PostgreSQL.",
+        "Took up freelance work (800+ hours) and built a strong command over NestJS, Redis, and PostgreSQL.",
       icon: <TrendingUp className="w-5 h-5" />,
       color: "bg-orange-500",
     },

@@ -5,7 +5,7 @@ import { Star, Quote } from "lucide-react";
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Upwork Client",
+      name: "AreekaWeb.com",
       role: "Freelance Client (NestJS Project – 2024)",
       location: "USA",
       quote:

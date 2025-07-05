@@ -12,8 +12,16 @@ export default function AchievementsSection() {
       featured: true,
     },
     {
+      icon: <ShoppingCart className="w-8 h-8 text-purple-600" />,
+      title: "Production Apps",
+      description: "BeSure Checkout Rules App",
+      bgColor: "bg-purple-100",
+      iconColor: "text-purple-600",
+    },
+
+    {
       icon: <Code className="w-8 h-8 text-blue-600" />,
-      title: "180+ Hours",
+      title: "800+ Hours",
       description: "Freelance NestJS Projects",
       bgColor: "bg-blue-100",
       iconColor: "text-blue-600",
@@ -24,13 +32,6 @@ export default function AchievementsSection() {
       description: "Built from scratch",
       bgColor: "bg-emerald-100",
       iconColor: "text-emerald-600",
-    },
-    {
-      icon: <ShoppingCart className="w-8 h-8 text-purple-600" />,
-      title: "Production Apps",
-      description: "Shopify + TiwanaConnect",
-      bgColor: "bg-purple-100",
-      iconColor: "text-purple-600",
     },
   ];
 

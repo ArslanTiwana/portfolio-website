@@ -33,7 +33,7 @@ export default function ExperienceSection() {
       achievements: [
         "Built backend services in NestJS + PostgreSQL with Redis & BullMQ",
         "Integrated event-based systems using pub/sub logic",
-        "Delivered over 1800 hours of freelance NestJS work",
+        "Delivered over 800 hours of freelance NestJS work",
       ],
     },
   ];
