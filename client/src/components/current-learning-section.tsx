@@ -8,13 +8,13 @@ export default function CurrentLearningSection() {
       topic: "Event-driven architecture with Apache Kafka",
       icon: <Zap className="w-6 h-6" />,
       color: "bg-gradient-to-r from-orange-500 to-red-500",
-      progress: 75,
+      progress: 70,
     },
     {
-      topic: "Advanced NestJS Microservices",
+      topic: "Graph Database Design with Neo4j",
       icon: <Settings className="w-6 h-6" />,
       color: "bg-gradient-to-r from-red-500 to-pink-500",
-      progress: 85,
+      progress: 50,
     },
     {
       topic: "System Design case studies",
@@ -26,13 +26,13 @@ export default function CurrentLearningSection() {
       topic: "Docker + Kubernetes",
       icon: <Cloud className="w-6 h-6" />,
       color: "bg-gradient-to-r from-cyan-500 to-blue-500",
-      progress: 50,
+      progress: 70,
     },
     {
       topic: "AI integration via OpenAI and LangChain",
       icon: <Bot className="w-6 h-6" />,
       color: "bg-gradient-to-r from-purple-500 to-indigo-500",
-      progress: 70,
+      progress: 40,
     },
   ];
 

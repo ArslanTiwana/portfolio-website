@@ -23,10 +23,10 @@ export default function FavoriteResourcesSection() {
     {
       title: "Kafka in Action",
       description: "Deep dive into event-driven architecture",
-      type: "Book",
+      type: "Youtube",
       icon: <BookOpen className="w-6 h-6" />,
       color: "bg-gradient-to-r from-orange-500 to-red-500",
-      link: "#",
+      link: "https://www.youtube.com/@piyushgargdev",
       impact: "Transformed how I think about distributed systems",
     },
     {
@@ -35,7 +35,7 @@ export default function FavoriteResourcesSection() {
       type: "Design Resource",
       icon: <Palette className="w-6 h-6" />,
       color: "bg-gradient-to-r from-purple-500 to-pink-500",
-      link: "https://refactoringui.com",
+      link: "https://scrimba.com/intro-to-ui-design-fundamentals-c0q/~0zdk",
       impact: "Improved my frontend and UX design skills",
     },
     {
@@ -45,17 +45,8 @@ export default function FavoriteResourcesSection() {
       type: "Book",
       icon: <Code className="w-6 h-6" />,
       color: "bg-gradient-to-r from-blue-500 to-indigo-500",
-      link: "#",
+      link: "https://github.com/Gatjuat-Wicteat-Riek/clean-code-book/blob/master/Clean%20Code%20(%20PDFDrive.com%20).pdf",
       impact: "Foundation for my coding standards and practices",
-    },
-    {
-      title: "CS50 – Harvard",
-      description: "Introduction to Computer Science fundamentals",
-      type: "OpenCourseWare",
-      icon: <GraduationCap className="w-6 h-6" />,
-      color: "bg-gradient-to-r from-emerald-500 to-green-500",
-      link: "https://cs50.harvard.edu",
-      impact: "Strengthened my computer science fundamentals",
     },
   ];
 
@@ -95,7 +86,14 @@ export default function FavoriteResourcesSection() {
                       <h3 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                         {resource.title}
                       </h3>
-                      <ExternalLink className="w-4 h-4 ml-2 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                      <a
+                        href={resource.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center"
+                      >
+                        <ExternalLink className="w-4 h-4 ml-2 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                      </a>
                     </div>
                     <Badge
                       variant="outline"
@@ -126,8 +124,15 @@ export default function FavoriteResourcesSection() {
                   <div
                     className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium text-white ${resource.color} group-hover:scale-105 transition-transform`}
                   >
-                    <span>Explore Resource</span>
-                    <ExternalLink className="w-3 h-3 ml-1" />
+                    <a
+                      href={resource.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center"
+                    >
+                      <span>Explore Resource</span>
+                      <ExternalLink className="w-3 h-3 ml-1" />
+                    </a>
                   </div>
                 </div>
               </CardContent>

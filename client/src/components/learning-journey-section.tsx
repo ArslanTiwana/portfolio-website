@@ -8,7 +8,7 @@ export default function LearningJourneySection() {
       year: "2019–2023",
       title: "Foundation Building",
       description:
-        "Learned fundamentals of software development. Completed BSCS with a gold medal.",
+        "Learned software development fundamentals, collaborated with peers under pressure, consistently achieved high marks, and graduated with a gold medal—building a solid foundation in core software concepts.",
       icon: <BookOpen className="w-5 h-5" />,
       color: "bg-blue-500",
     },
@@ -16,7 +16,7 @@ export default function LearningJourneySection() {
       year: "2023",
       title: "Real-World Experience",
       description:
-        "Interned at a startup, worked on Shopify apps, and contributed to products like Techless.com.",
+        "Interned at a startup, worked on production apps, and contributed to products like Techless.com.",
       icon: <Code className="w-5 h-5" />,
       color: "bg-emerald-500",
     },
@@ -24,7 +24,7 @@ export default function LearningJourneySection() {
       year: "2024",
       title: "Professional Growth",
       description:
-        "Took up freelance work (800+ hours) and built a strong command over NestJS, Redis, and PostgreSQL.",
+        "Worked on Shopify Apps, took up freelance work (800+ hours) and built a strong command over NestJS, Node.js, Rust and PostgreSQL.",
       icon: <TrendingUp className="w-5 h-5" />,
       color: "bg-orange-500",
     },
@@ -32,7 +32,7 @@ export default function LearningJourneySection() {
       year: "2025 (Now)",
       title: "Innovation & Architecture",
       description:
-        "Exploring Kafka, event-driven architecture, scalable backend systems, and building TiwanaConnect.",
+        "Currently diving into system design, building AI agents using LLMs with frameworks like LangChain, and exploring Kafka, event-driven architecture, and scalable backend systems while working on TiwanaConnect.",
       icon: <Zap className="w-5 h-5" />,
       color: "bg-purple-500",
     },
@@ -50,7 +50,7 @@ export default function LearningJourneySection() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 mx-auto mb-6 rounded-full"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-slate-900">
-            In 2022, I started my journey in software development with curiosity
+            In 2019, I started my journey in software development with curiosity
             and passion. Over the years, I've grown from building small projects
             to contributing to real-world applications and architecting scalable
             systems.

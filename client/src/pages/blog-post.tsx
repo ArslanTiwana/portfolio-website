@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Calendar, Clock, User, Share2 } from "lucide-react";
 import { Link } from "wouter";
+import { marked } from "marked";
 
 interface BlogPost {
   id: string;
@@ -26,19 +27,19 @@ export default function BlogPost() {
   useEffect(() => {
     if (params?.slug) {
       // Fetch individual blog post
-      fetch(`/api/blog/${params.slug}`)
-        .then(res => {
+      fetch(`/blogs/${params.slug}.json`)
+        .then((res) => {
           if (!res.ok) {
-            throw new Error('Blog post not found');
+            throw new Error("Blog post not found");
           }
           return res.json();
         })
-        .then(data => {
+        .then((data) => {
           setPost(data);
           setLoading(false);
         })
-        .catch(err => {
-          console.error('Failed to fetch blog post:', err);
+        .catch((err) => {
+          console.error("Failed to fetch blog post:", err);
           setError(err.message);
           setLoading(false);
         });
@@ -54,7 +55,7 @@ export default function BlogPost() {
           url: window.location.href,
         });
       } catch (err) {
-        console.log('Error sharing:', err);
+        console.log("Error sharing:", err);
       }
     } else {
       // Fallback: copy to clipboard
@@ -82,13 +83,15 @@ export default function BlogPost() {
 
   if (error || !post) {
     return (
-      <div className="min-h-screen bg-slate-50 text-slate-900">
+      <div className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-3xl font-bold mb-4">Blog Post Not Found</h1>
-            <p className="text-slate-600 mb-8">The blog post you're looking for doesn't exist.</p>
+            <p className="text-slate-600 mb-8">
+              The blog post you're looking for doesn't exist.
+            </p>
             <Link href="/blog">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+              <Button className="absolute top-8 left-8 text-white hover:text-blue-200">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Blog
               </Button>
@@ -102,25 +105,28 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       {/* Header */}
-      <div className="bg-white border-b border-slate-200">
+      <div className="bg-gradient-to-r from-blue-600 to-emerald-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between mb-6">
             <Link href="/blog">
-              <Button variant="ghost" className="text-slate-600 hover:text-blue-600">
+              <Button
+                variant="ghost"
+                className="absolute top-8 left-8 text-white hover:text-blue-200"
+              >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Blog
               </Button>
             </Link>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="ghost"
               onClick={handleShare}
-              className="text-slate-600 hover:text-blue-600"
+              className="text-white hover:text-blue-200 "
             >
               <Share2 className="w-4 h-4 mr-2" />
               Share
             </Button>
           </div>
-          
+
           <div className="mb-6">
             <div className="flex flex-wrap gap-2 mb-4">
               {post.tags.map((tag) => (
@@ -129,8 +135,10 @@ export default function BlogPost() {
                 </Badge>
               ))}
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">{post.title}</h1>
-            <div className="flex items-center space-x-6 text-slate-600">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">
+              {post.title}
+            </h1>
+            <div className="flex items-center space-x-6 ">
               <div className="flex items-center">
                 <User className="w-4 h-4 mr-2" />
                 {post.author}
@@ -152,9 +160,9 @@ export default function BlogPost() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Card className="bg-white">
           <CardContent className="p-8">
-            <div 
+            <div
               className="prose prose-lg max-w-none"
-              dangerouslySetInnerHTML={{ __html: post.content }}
+              dangerouslySetInnerHTML={{ __html: marked.parse(post.content) }}
             />
           </CardContent>
         </Card>

@@ -84,13 +84,14 @@ export default function HeroSection() {
               Read My Blog
             </Button>
           </Link>
-          <Button
-            onClick={() => scrollToSection("#projects")}
-            variant="outline"
-            className="border-slate-600 hover:border-blue-500 dark:text-slate-300 hover:text-blue-400 px-8 py-3 font-semibold transition-colors"
-          >
-            View Projects
-          </Button>
+          <a href="/files/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="outline"
+              className="border-slate-600 hover:border-blue-500 dark:text-slate-300 hover:text-blue-400 px-8 py-3 font-semibold transition-colors"
+            >
+              Resume
+            </Button>
+          </a>
         </div>
       </div>
     </section>

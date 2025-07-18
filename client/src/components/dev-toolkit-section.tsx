@@ -36,7 +36,7 @@ export default function DevToolkitSection() {
       icon: <Zap className="w-6 h-6" />,
       color: "bg-gradient-to-r from-cyan-500 to-blue-500",
       tools: [
-        { name: "Railway", description: "deployment" },
+        { name: "Vercel", description: "frontend deployment" },
         { name: "Render", description: "hosting" },
         { name: "AWS EC2", description: "cloud infrastructure" },
       ],
@@ -46,12 +46,12 @@ export default function DevToolkitSection() {
       icon: <Zap className="w-6 h-6" />,
       color: "bg-gradient-to-r from-cyan-500 to-blue-500",
       tools: [
-        { name: "ChatGPT", description: "Day to day tasks" },
+        { name: "ChatGPT", description: "day to day tasks" },
         {
           name: "Claude",
-          description: "Extensive research and coding assitance",
+          description: "extensive research and coding assistance",
         },
-        { name: "Replit", description: "Develop  basic AI apps" },
+        { name: "Replit", description: "develop basic AI apps" },
       ],
     },
   ];

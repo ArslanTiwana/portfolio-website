@@ -23,8 +23,8 @@ export default function TechStackSection() {
       skills: [
         "Docker",
         "GitHub Actions",
-        "Railway",
-        "Fly.io",
+        "Vercel",
+        "Cloudflare",
         "PM2",
         "Nginx",
         "CI/CD pipelines",

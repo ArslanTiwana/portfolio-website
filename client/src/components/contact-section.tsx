@@ -78,9 +78,7 @@ export default function ContactSection() {
               asChild
               className="bg-gradient-primary hover:opacity-90 text-white px-8 py-4 font-semibold text-lg transition-all transform hover:scale-105"
             >
-              <a href="mailto:muhammadarslan0111@email.com">
-                Start a Conversation
-              </a>
+              <a href="https://wa.me/+923128588409">Start a Conversation</a>
             </Button>
           </div>
         </div>

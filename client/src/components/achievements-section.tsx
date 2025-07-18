@@ -26,13 +26,13 @@ export default function AchievementsSection() {
       bgColor: "bg-blue-100",
       iconColor: "text-blue-600",
     },
-    {
-      icon: <Server className="w-8 h-8 text-emerald-600" />,
-      title: "Event-Based Systems",
-      description: "Built from scratch",
-      bgColor: "bg-emerald-100",
-      iconColor: "text-emerald-600",
-    },
+    // {
+    //   icon: <Server className="w-8 h-8 text-emerald-600" />,
+    //   title: "Event-Based Systems",
+    //   description: "Built from scratch",
+    //   bgColor: "bg-emerald-100",
+    //   iconColor: "text-emerald-600",
+    // },
   ];
 
   return (
@@ -45,7 +45,7 @@ export default function AchievementsSection() {
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-6 rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {achievements.map((achievement, index) => (
             <Card
               key={index}
