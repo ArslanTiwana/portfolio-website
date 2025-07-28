@@ -52,7 +52,7 @@ export default function HeroSection() {
             Gold Medalist
           </strong>{" "}
           computer science graduate and detail-driven full-stack engineer with{" "}
-          <strong className="text-blue-600 dark:text-blue-400">2+ years</strong>{" "}
+          <strong className="text-blue-600 dark:text-blue-400">3+ years</strong>{" "}
           of experience in backend-heavy systems and full-stack application
           design. I bring deep expertise in{" "}
           <strong className="text-emerald-600 dark:text-emerald-400">
